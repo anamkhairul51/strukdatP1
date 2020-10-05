@@ -1,8 +1,9 @@
 # Muhammad Khairul Anamn
 # A11.2019.11712
-
+# A11.4315
 import sys
 
+print('***************** PROGRAM BILLING TIKET FILM SEDERHANA  ******************')
 print('==========================================================================')
 print('==|     Judul Film     |               Bioskop jam 12.30               |==')
 print('==|                    |_______________________________________________|==')
@@ -12,6 +13,7 @@ print('==| Susi Susanti(s)    | 40 ribu       | 25 ribu       | 35 ribu       |=
 print('==| Maleficent 3D(m)   | 50 ribu       | 35 ribu       | 45 ribu       |==')
 print('==========================================================================')
 print('__________________________________________________________________________')
+
 inFilm = str(input('\nJudul film yang dipilih(s/m): '))
 inBioskop = int(input('Bioskop yang dipilih(1-3): '))
 inJmlTiket = int(input('Jumlah tiket: '))
@@ -54,3 +56,10 @@ print('\nHarga  =', 'Rp', harga)
 print('Diskon =', 'Rp', diskon(harga))
 print('____________________+')
 print('Total  =', 'Rp', total)
+print('__________________________________________________________________________')
+bayar = int(input('Uang  yang dibayarkan = '))
+if bayar - total > 0:
+    print('Kembalian =', 'Rp', bayar - total)
+    print('********************  TERIMA KASIH SUDAH BERBELANJA  *********************')
+elif bayar - total < 0:
+    print('Uang nya kurang', 'Rp', total - bayar, 'Boss, disini ga terima nge-Bon lho')
